@@ -1,0 +1,60 @@
+.why-choose {
+  width: 100%;
+  padding: 35px 0 70px;
+  background-color: $lightGrayishBlue;
+  &__intro {
+    margin: auto;
+    p {
+      margin: 0;
+    }
+    h2 {
+      width: 70%;
+    }
+    @include breakpoint-up(large) {
+      max-width: 600px;
+      margin: 0;
+      p,
+      h2 {
+        text-align: start;
+      }
+      h2 {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__card-container {
+    flex-direction: column;
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__card {
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 0;
+    img {
+      margin-bottom: 20px;
+    }
+    &:not(:last-child) {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint-up(large) {
+      align-items: flex-start;
+      margin: 0;
+      &:not(:first-child) {
+        padding-right: 0;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      p,
+      h3 {
+        text-align: start;
+      }
+    }
+  }
+}
